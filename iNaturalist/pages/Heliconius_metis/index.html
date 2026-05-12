@@ -3,17 +3,18 @@
 <head>
 <meta charset="utf-8"/>
 <style>body{background-color:white;}</style>
-<script src="index_files/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="index_files/jquery-1.12.4/jquery.min.js"></script>
+<link href="index_files/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
+<script src="index_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="index_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="index_files/leaflet-1.3.1/leaflet.js"></script>
 <link href="index_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
 <script src="index_files/proj4-2.6.2/proj4.min.js"></script>
 <script src="index_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="index_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="index_files/leaflet-binding-2.1.1/leaflet.js"></script>
-<script src="index_files/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
-<script src="index_files/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+<script src="index_files/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="index_files/leaflet-providers-3.0.0/leaflet-providers.js"></script>
+<script src="index_files/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
 <link href="index_files/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
 <link href="index_files/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
 <script src="index_files/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
@@ -23,9 +24,69 @@
 </head>
 <body>
 <div id="htmlwidget_container">
-  <div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-964419a338e7a2b8bbcd" style="width:100%;height:400px;"></div>
+  <style>.marker-cluster-small {
+	background-color: rgba(0,0,0, 0.6);
+	}
+.marker-cluster-small div {
+	background-color: rgba(0,102,255, 0.6);
+	}
+
+.marker-cluster-medium {
+	background-color: rgba(241, 211, 87, 0.6);
+	}
+.marker-cluster-medium div {
+	background-color: rgba(240, 194, 12, 0.6);
+	}
+
+.marker-cluster-large {
+	background-color: rgba(253, 156, 115, 0.6);
+	}
+.marker-cluster-large div {
+	background-color: rgba(241, 128, 23, 0.6);
+	}
+
+	/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small {
+	background-color: rgb(181, 226, 140);
+	}
+.leaflet-oldie .marker-cluster-small div {
+	background-color: rgb(110, 204, 57);
+	}
+
+.leaflet-oldie .marker-cluster-medium {
+	background-color: rgb(241, 211, 87);
+	}
+.leaflet-oldie .marker-cluster-medium div {
+	background-color: rgb(240, 194, 12);
+	}
+
+.leaflet-oldie .marker-cluster-large {
+	background-color: rgb(253, 156, 115);
+	}
+.leaflet-oldie .marker-cluster-large div {
+	background-color: rgb(241, 128, 23);
+}
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+.marker-cluster div {
+	width: 11.25px;
+	height: 11.25px;
+	margin-left: 1.875px;
+	margin-top: 1.875px;
+
+	text-align: center;
+	border-radius: 11.25px;
+	font: 7px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+.marker-cluster span {
+	line-height: 11.25px;
+	}</style>
+  <div class="leaflet html-widget html-fill-item" id="htmlwidget-d7d0551f5e2fa09a851e" style="width:100%;height:400px;"></div>
 </div>
-<script type="application/json" data-for="htmlwidget-964419a338e7a2b8bbcd">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.NatGeoWorldMap",null,"National Geographic",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Satellite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenTopoMap",null,"Topography",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,"OSM",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[-8.75,-6.7926984294,-5.503435535,-5.7320333333,-6.7942391726,-6.791175754,-6.7916817517,-6.792332561,-6.7910411101],[-46.33333,-44.4963121739,-45.2308144793,-45.314105,-44.4943834407,-44.4972297042,-44.4970044631,-44.4964119679,-44.49705088],null,null,"<b><i>Heliconius metis<\/i><\/b>",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<div>Taxon: Heliconius metis<br>Locality: Balsas, Maranhao, Brazil<br>Locality string: Serra do Penitente, Balsas MA<br>Collection:Moreira and Mielke<br><img src='https://www.cliniquevetodax.com/Heliconius/images/metis%20big.jpg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: São Domingos do Azeitão, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:01 Aug 2015<br>Collection:<a href=https://www.inaturalist.org/observations/71328148>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/116108510/medium.jpg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: Barra do Corda, Maranhao, Brazil<br>Locality string: Barra do Corda - MA, 65950-000, Brasil<br>Date:23 Jun 2023<br>Collection:<a href=https://www.inaturalist.org/observations/169061541>iNaturalist<\/a><br><img src='https://inaturalist-open-data.s3.amazonaws.com/photos/300676701/medium.jpeg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: Barra do Corda, Maranhao, Brazil<br>Locality string: Barra Do Corda, MA, BR<br>Date:23 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/174668481>iNaturalist<\/a><br><img src='https://inaturalist-open-data.s3.amazonaws.com/photos/303474026/medium.jpg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: São Domingos do Azeitão, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:26 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176271541>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306435999/medium.jpeg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: São Domingos do Azeitão, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:26 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176271543>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306436294/medium.jpeg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: São Domingos do Azeitão, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:26 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176271545>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306436609/medium.jpeg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: São Domingos do Azeitão, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:28 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176280419>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306447676/medium.jpeg' width='200' /><br>","<div>Taxon: Heliconius metis<br>Locality: São Domingos do Azeitão, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:28 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/177571310>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/308848793/medium.jpg' width='200' /><br>"],{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"closeOnClick":false,"className":"","autoClose":false},{"showCoverageOnHover":true,"zoomToBoundsOnClick":false,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false,"maxClusterRadius":10,"transparent":true,"singleMarkerMode":true,"iconCreateFunction":"function(cluster) {\nvar c = ' marker-cluster-small';\nvar html = '<div style=\"background-color:rgba(255,0,0,1)\"><span>' + cluster.getChildCount() + '<\/div><span>'\nreturn new L.DivIcon({html: html, className: 'marker-cluster' + c,iconSize: new L.Point(15, 15) });\n}"},null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[["National Geographic","Satellite","Topography","OSM"],"<b><i>Heliconius metis<\/i><\/b>",{"collapsed":false,"autoZIndex":true,"position":"topright"}]},{"method":"hideGroup","args":[null]}],"limits":{"lat":[-8.75,-5.503435535],"lng":[-46.33333,-44.4943834407]}},"evals":["calls.4.args.8.iconCreateFunction"],"jsHooks":[]}</script>
-<script type="application/htmlwidget-sizing" data-for="htmlwidget-964419a338e7a2b8bbcd">{"viewer":{"width":"100%","height":400,"padding":0,"fill":true},"browser":{"width":"100%","height":400,"padding":0,"fill":true}}</script>
+<script type="application/json" data-for="htmlwidget-d7d0551f5e2fa09a851e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.NatGeoWorldMap",null,"National Geographic",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Satellite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenTopoMap",null,"Topography",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,"OSM",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[-8.75,-6.7926984294,-5.503435535,-5.7320333333,-6.7942391726,-6.791175754,-6.7916817517,-6.792332561,-6.7910411101,-5.4882717],[-46.33333,-44.4963121739,-45.2308144793,-45.314105,-44.4943834407,-44.4972297042,-44.4970044631,-44.4964119679,-44.49705088,-47.4417952],null,null,"<b><i>Heliconius metis<\/i><\/b>",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<div>Taxon: Heliconius metis<br>Locality: Balsas, Maranhao, Brazil<br>Locality string: Serra do Penitente, Balsas MA<br>Collection:Moreira and Mielke<br><img src='https://www.cliniquevetodax.com/Heliconius/images/metis%20big.jpg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: SÃ£o Domingos do AzeitÃ£o, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:01 Aug 2015<br>Collection:<a href=https://www.inaturalist.org/observations/71328148>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/116108510/square.jpg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: Barra do Corda, Maranhao, Brazil<br>Locality string: Barra do Corda - MA, 65950-000, Brasil<br>Date:23 Jun 2023<br>Collection:<a href=https://www.inaturalist.org/observations/169061541>iNaturalist<\/a><br><img src='https://inaturalist-open-data.s3.amazonaws.com/photos/300676701/square.jpeg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: Barra do Corda, Maranhao, Brazil<br>Locality string: Barra Do Corda, MA, BR<br>Date:23 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/174668481>iNaturalist<\/a><br><img src='https://inaturalist-open-data.s3.amazonaws.com/photos/303474026/square.jpg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: SÃ£o Domingos do AzeitÃ£o, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:26 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176271541>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306435999/square.jpeg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: SÃ£o Domingos do AzeitÃ£o, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:26 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176271543>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306436294/square.jpeg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: SÃ£o Domingos do AzeitÃ£o, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:26 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176271545>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306436609/square.jpeg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: SÃ£o Domingos do AzeitÃ£o, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:28 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/176280419>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/306447676/square.jpeg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: SÃ£o Domingos do AzeitÃ£o, Maranhao, Brazil<br>Locality string: SÃ£o Domingos do AzeitÃ£o - MA, Brasil<br>Date:28 Jul 2023<br>Collection:<a href=https://www.inaturalist.org/observations/177571310>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/308848793/square.jpg' width='200' /><br><\/div>","<div>Taxon: Heliconius metis<br>Locality: Imperatriz, Maranhao, Brazil<br>Locality string: Ac - Jardim das Oliveiras, Imperatriz - MA, Brasil<br>Date:25 Jul 2025<br>Collection:<a href=https://www.inaturalist.org/observations/301038562>iNaturalist<\/a><br><img src='https://static.inaturalist.org/photos/542445174/square.jpg' width='200' /><br><\/div>"],{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"closeOnClick":false,"className":"","autoClose":false},{"showCoverageOnHover":true,"zoomToBoundsOnClick":false,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false,"maxClusterRadius":10,"transparent":true,"singleMarkerMode":true,"iconCreateFunction":"function(cluster) {\n      var c = ' marker-cluster-small';\n      var html = '<div style=\"background-color:rgba(255,0,0,1)\"><span>' +\n                 cluster.getChildCount() +\n                 '<\/span><\/div>';\n      return new L.DivIcon({\n        html: html,\n        className: 'marker-cluster' + c,\n        iconSize: new L.Point(15, 15)\n      });\n    }"},null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[["National Geographic","Satellite","Topography","OSM"],"<b><i>Heliconius metis<\/i><\/b>",{"collapsed":false,"autoZIndex":true,"position":"topright"}]},{"method":"hideGroup","args":[null]}],"limits":{"lat":[-8.75,-5.4882717],"lng":[-47.4417952,-44.4943834407]}},"evals":["calls.4.args.8.iconCreateFunction"],"jsHooks":[]}</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-d7d0551f5e2fa09a851e">{"viewer":{"width":"100%","height":400,"padding":0,"fill":true},"browser":{"width":"100%","height":400,"padding":0,"fill":true}}</script>
 </body>
 </html>

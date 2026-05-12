@@ -1,8 +1,8 @@
 .marker-cluster-small {
-	background-color: rgba(0,0,0, 0.6);
+	background-color: rgba(181, 226, 140, 0.6);
 	}
 .marker-cluster-small div {
-	background-color: rgba(0,102,255, 0.6);
+	background-color: rgba(110, 204, 57, 0.6);
 	}
 
 .marker-cluster-medium {
@@ -46,15 +46,15 @@
 	border-radius: 20px;
 	}
 .marker-cluster div {
-	width: 11.25px;
-	height: 11.25px;
-	margin-left: 1.875px;
-	margin-top: 1.875px;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
 
 	text-align: center;
-	border-radius: 11.25px;
-	font: 7px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	border-radius: 15px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
 	}
 .marker-cluster span {
-	line-height: 11.25px;
+	line-height: 30px;
 	}
